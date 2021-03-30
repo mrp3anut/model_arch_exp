@@ -34,7 +34,10 @@ We can visualise the filters of the CNN layers. Each layer has a specific kernel
                 plt.plot(filters[i][j])
                 plt.show()
 
-
+![Convolution Filters](https://github.com/mrp3anut/earthml/blob/main/conv_filter_0_0.png)
+![Convolution Filters](https://github.com/mrp3anut/earthml/blob/main/conv_filter_0_10.png)
+![Convolution Filters](https://github.com/mrp3anut/earthml/blob/main/conv_filter_0_25.png)
+![Convolution Filters](https://github.com/mrp3anut/earthml/blob/main/conv_filter_0_63.png)
 
 ### Feature Maps
 Feature maps are a way to understand what each layers does to an input when fed into a trained model.
@@ -76,6 +79,18 @@ We do this by creating a new model for each convolution layer, making that layer
                 plt.title(i[:-4])
                 plt.show()
 
+### Events
+![Convolution Feature Maps(Event)](https://github.com/mrp3anut/earthml/blob/main/map_ev1_conv01.png)
+![Convolution Feature Maps(Event)](https://github.com/mrp3anut/earthml/blob/main/map_ev1_conv18.png)
+![Convolution Feature Maps(Event)](https://github.com/mrp3anut/earthml/blob/main/map_ev1_conv57.png)
+![Convolution Feature Maps(Event)](https://github.com/mrp3anut/earthml/blob/main/map_ev1_conv96.png)
+
+### Noise
+![Convolution Feature Maps(Noise)](https://github.com/mrp3anut/earthml/blob/main/map_n1_conv01.png)
+![Convolution Feature Maps(Noise)](https://github.com/mrp3anut/earthml/blob/main/map_n1_conv18.png)
+![Convolution Feature Maps(Noise)](https://github.com/mrp3anut/earthml/blob/main/map_n1_conv57.png)
+![Convolution Feature Maps(Noise)](https://github.com/mrp3anut/earthml/blob/main/map_n1_conv96.png)
+
 ## Attention Layers
 There are 4 attention layers in the model. 2 global attentions in the main branch and two local attentions afterwards, for P and S picking(one each).
 ### Weights
@@ -101,6 +116,12 @@ Attention weights can be interpreted as how related a time step is to the label.
             plt.plot(attention_dict[i][j])
             plt.title(i)
             plt.show()
+            
+            
+![Attention Weights](https://github.com/mrp3anut/earthml/blob/main/attention_d0_0.png)
+![Attention Weights](https://github.com/mrp3anut/earthml/blob/main/attention_d_0.png)
+![Attention Weights](https://github.com/mrp3anut/earthml/blob/main/attention_p_0.png)
+![Attention Weights](https://github.com/mrp3anut/earthml/blob/main/attention_s_0.png)
 
 ### Feature Maps
 We can also create a feature map using the same method we used for the CNN blocks. Using the weights from the trained model, feeding an input and taking outputs from the layers we are interested in.
@@ -123,4 +144,14 @@ We can also create a feature map using the same method we used for the CNN block
                 plt.plot(predicted_reshaped)
                 plt.title(i[:-4])
                 plt.show()
-
+                
+### Events
+![Attention Feature Maps(Event)](https://github.com/mrp3anut/earthml/blob/main/map_ev1_attention36.png)
+![Atteniton Feature Maps(Event)](https://github.com/mrp3anut/earthml/blob/main/map_ev1_attention42.png)
+![Attention Feature Maps(Event)](https://github.com/mrp3anut/earthml/blob/main/map_ev1_attention50.png)
+![Attention Feature Maps(Event)](https://github.com/mrp3anut/earthml/blob/main/map_ev1_attention51.png)
+### Noise
+![Attention Feature Maps(Noise)](https://github.com/mrp3anut/earthml/blob/main/map_n1_attention36.png)
+![Atteniton Feature Maps(Noise)](https://github.com/mrp3anut/earthml/blob/main/map_n1_attention42.png)
+![Attention Feature Maps(Noise)](https://github.com/mrp3anut/earthml/blob/main/map_n1_attention50.png)
+![Attention Feature Maps(Noise)](https://github.com/mrp3anut/earthml/blob/main/map_n1_attention51.png)
