@@ -249,6 +249,14 @@ STEADmicro has
     
 	-   2354 Noise waveforms
 
+
+Merged:
+merged dataset contains steadmini_1 and steadmini_4
+- 43543 waveforms
+	-   20000 Event
+	-   23543 Noise
+
+
 # 4-Visualising Layers
 By visualising weights and outputs for a given layer we can gain insight about how each layer contribute to the model.
 ## 4.1 Convolution layers
